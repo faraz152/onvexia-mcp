@@ -4,9 +4,9 @@
 
 # Onvexia — Crypto Research & Market Intelligence, for AI
 
-### Is the hype real? Who is accumulating? Was that influencer ever right?
+### Is the hype real? Is the token overvalued? Who is accumulating? Was that influencer ever right?
 
-**Crypto sentiment, whale tracking and on-chain analytics for traders, investors and AI agents**
+**Crypto fundamental analysis, sentiment, whale tracking and on-chain analytics — for traders, investors and AI agents**
 66 read-only tools · 2,300+ coins · works in Claude, ChatGPT and Cursor · no install, no API key
 
 [![MCP Registry](https://img.shields.io/badge/MCP%20Registry-com.onvexia%2Fonvexia-22D3EE)](https://registry.modelcontextprotocol.io/v0/servers?search=onvexia)
@@ -77,7 +77,12 @@ Once connected, these are ordinary questions in plain English:
 - *"What narratives is money rotating into right now?"*
 - *"Show me new DEX pairs above $250k liquidity from the last 48 hours."*
 
-**Due diligence**
+**Fundamental analysis and due diligence**
+- *"Give me the full fundamentals on $TOKEN — FDV, revenue, TVL, treasury, unlocks."*
+- *"Is $TOKEN overvalued? Show market cap versus fully diluted valuation."*
+- *"How much revenue does this protocol actually earn, and does it accrue to the token?"*
+- *"How big is their DAO treasury, and how much of it is their own token?"*
+- *"Has this protocol ever been exploited?"*
 - *"What unlocks are coming for $TOKEN, and how concentrated are the holders?"*
 - *"Does this AI-sector project actually ship code, against how much attention it gets?"*
 - *"Are there SEC filings or court dockets naming this issuer?"*
@@ -97,7 +102,7 @@ Use it through any AI assistant — Claude, ChatGPT, Cursor — by connecting on
 
 Use Onvexia to:
 
-▪ Check if crypto hype is real or bot-driven before you buy ▪ Spot pump-and-dump and coordinated shill campaigns while they are forming ▪ Track whale wallets, smart money and exchange inflows/outflows across 80,000+ labelled addresses ▪ Find trending altcoins early with social volume and sentiment from X/Twitter, Reddit, Farcaster and Bluesky ▪ Rank 2,300+ coins by Galaxy Score and AltRank, with the components behind every score ▪ Check an influencer's real track record — did they predict the move, or react to it ▪ Do token due diligence: unlock schedules, treasury, TVL, revenue, holder concentration ▪ Screen 2,300+ cryptocurrencies on social, on-chain and fundamental filters ▪ Find emerging DEX pairs and new exchange listings before they trend ▪ Query the entire dataset directly with read-only SQL
+▪ Check if crypto hype is real or bot-driven before you buy ▪ Spot pump-and-dump and coordinated shill campaigns while they are forming ▪ Track whale wallets, smart money and exchange inflows/outflows across 80,000+ labelled addresses ▪ Find trending altcoins early with social volume and sentiment from X/Twitter, Reddit, Farcaster and Bluesky ▪ Rank 2,300+ coins by Galaxy Score and AltRank, with the components behind every score ▪ Check an influencer's real track record — did they predict the move, or react to it ▪ Run full crypto fundamental analysis on any token: market cap vs fully diluted valuation (FDV), tokenomics and supply schedule, protocol revenue, TVL, DAO treasury size and composition, exploit history, governance proposals, derivatives open interest, valuation ratios and a graded scorecard ▪ Do token due diligence before you buy: unlock schedules, holder concentration, competitive rank against peers ▪ Screen 2,300+ cryptocurrencies on social, on-chain and fundamental filters ▪ Find emerging DEX pairs and new exchange listings before they trend ▪ Query the entire dataset directly with read-only SQL
 
 The MCP is public, read-only, and requires no API key.
 
@@ -239,6 +244,15 @@ detection · is this crypto a scam · crypto due diligence · token unlock
 schedule · holder concentration · crypto screener · social volume · crypto
 sentiment analysis · Galaxy Score · AltRank · crypto influencer accuracy ·
 find early crypto gems · DEX pair scanner · new exchange listings
+
+**Fundamental analysis:** crypto fundamental analysis · fundamental analysis
+tool for crypto · token fundamentals · tokenomics analysis · fully diluted
+valuation · FDV vs market cap · market cap to FDV ratio · token valuation
+ratios · protocol revenue · crypto revenue analysis · TVL tracker · DAO
+treasury tracker · treasury composition · token supply schedule · circulating
+vs total supply · crypto exploit history · protocol security audit · governance
+proposal tracker · derivatives open interest · crypto scorecard · token rating ·
+crypto peer comparison · is this token overvalued
 
 **For developers and AI agents:** crypto MCP server · Model Context Protocol
 crypto · crypto API · on-chain analytics API · crypto market intelligence API ·
