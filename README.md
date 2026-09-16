@@ -2,11 +2,12 @@
 
 <img src="assets/logo.svg" alt="Onvexia crypto MCP server" width="120" height="120">
 
-# Onvexia — Crypto MCP Server
+# Onvexia — Crypto Research & Market Intelligence, for AI
 
-### Real-time crypto sentiment, whale tracking and on-chain data for Claude, ChatGPT and any AI agent
+### Is the hype real? Who is accumulating? Was that influencer ever right?
 
-**66 read-only tools · 2,300+ coins · no install · no API key · no signup**
+**Crypto sentiment, whale tracking and on-chain analytics for traders, investors and AI agents**
+66 read-only tools · 2,300+ coins · works in Claude, ChatGPT and Cursor · no install, no API key
 
 [![MCP Registry](https://img.shields.io/badge/MCP%20Registry-com.onvexia%2Fonvexia-22D3EE)](https://registry.modelcontextprotocol.io/v0/servers?search=onvexia)
 [![Smithery](https://img.shields.io/badge/Smithery-onvexia-22D3EE)](https://smithery.ai/server/farazgr8007/onvexia)
@@ -52,44 +53,57 @@ npx -y @smithery/cli install farazgr8007/onvexia
 
 ## The problem this solves
 
-An LLM asked about a token answers from training data that is months old. It
-cannot tell you that mentions tripled this week, that the wallets buying are
-labelled exchange hot wallets, or that 40% of the accounts driving a trend are
-automated.
+**If you trade or invest:** by the time a coin is trending on your timeline, you
+cannot tell whether 40,000 mentions came from 40,000 people or 400 bots, whether
+the wallets buying are accumulating or are exchange hot wallets about to sell,
+or whether the account that called it has ever been right before. That
+information exists on-chain and in public posts. It is just not in one place at
+the moment you need it.
 
-Worse, it cannot tell you when it **does not know** — so a quiet market and a
-gap in coverage look identical.
+**If you build with AI:** an LLM asked about a token answers from training data
+months old, and — worse — cannot tell you when it *does not know*. A quiet market
+and a hole in its knowledge look identical in the answer you get back.
 
-Onvexia gives your agent live measurements and makes it say which is which.
+Onvexia gives both live measurements, and makes the answer say which is which.
 
 ## What you can ask it
 
-Once connected, these are ordinary questions:
+Once connected, these are ordinary questions in plain English:
 
+**Trading and research**
 - *"Is the hype around $TOKEN real, or is it bots?"*
-- *"Which wallets moved the most ETH into exchanges this week?"*
-- *"Show me the top 10 coins by Galaxy Score and what is driving each score."*
+- *"Which wallets moved the most ETH onto exchanges this week?"*
+- *"Find coins under $100M market cap with rising social volume and a flat price."*
+- *"What narratives is money rotating into right now?"*
+- *"Show me new DEX pairs above $250k liquidity from the last 48 hours."*
+
+**Due diligence**
+- *"What unlocks are coming for $TOKEN, and how concentrated are the holders?"*
+- *"Does this AI-sector project actually ship code, against how much attention it gets?"*
+- *"Are there SEC filings or court dockets naming this issuer?"*
+
+**Accountability**
 - *"Did this influencer call the move before it happened, or after?"*
-- *"Which AI-sector tokens actually ship code, against how much attention they get?"*
-- *"Find coins under $100M market cap with rising social volume and falling price."*
-- *"What narratives are rotating into right now?"*
+- *"Rank the top crypto influencers by measured accuracy, not follower count."*
+
+**Sanity checks**
 - *"What data do you actually have on this token?"*
 
 ## What it does
 
-Onvexia is a crypto MCP server that gives Claude, ChatGPT, Cursor and any AI agent real-time crypto social sentiment, on-chain whale tracking and market intelligence across 2,300+ coins. Connect one URL — no install, no API key, no signup.
+Onvexia is a crypto research and market intelligence platform for traders, investors, analysts and AI agents. Find out whether a token's hype is real or manufactured, which wallets are quietly accumulating or dumping, which altcoins have social momentum building before the price moves, and whether the influencer calling it has ever actually been right.
 
-Ask it what people are saying about a token, who is saying it, whether the hype is real or bot-driven, and which influencers were actually right before the move.
+Use it through any AI assistant — Claude, ChatGPT, Cursor — by connecting one URL. No install, no API key, no signup.
 
 Use Onvexia to:
 
-▪ Track crypto social sentiment and social volume across X/Twitter, Reddit, Farcaster and Bluesky ▪ Monitor whale transactions, exchange inflows and outflows against 80,000+ labelled wallet addresses ▪ Detect bot activity, fake engagement and coordinated pump campaigns before you act on a trend ▪ Rank tokens by Galaxy Score and AltRank with the components behind every score ▪ Check whether an influencer predicted a move or just reacted to it ▪ Screen 2,300+ crypto assets on social, on-chain and fundamental filters ▪ Pull token fundamentals, TVL, treasury, unlock schedules and multi-timeframe technical levels ▪ Find emerging DEX pairs and new exchange listings ▪ Query the whole dataset directly with read-only SQL
+▪ Check if crypto hype is real or bot-driven before you buy ▪ Spot pump-and-dump and coordinated shill campaigns while they are forming ▪ Track whale wallets, smart money and exchange inflows/outflows across 80,000+ labelled addresses ▪ Find trending altcoins early with social volume and sentiment from X/Twitter, Reddit, Farcaster and Bluesky ▪ Rank 2,300+ coins by Galaxy Score and AltRank, with the components behind every score ▪ Check an influencer's real track record — did they predict the move, or react to it ▪ Do token due diligence: unlock schedules, treasury, TVL, revenue, holder concentration ▪ Screen 2,300+ cryptocurrencies on social, on-chain and fundamental filters ▪ Find emerging DEX pairs and new exchange listings before they trend ▪ Query the entire dataset directly with read-only SQL
 
 The MCP is public, read-only, and requires no API key.
 
-Every response separates what was measured from what is not held. Sections carry a `state`, coverage counts ship alongside the results, and a null label means no label is held — never that the wallet or influencer is safe. An empty list is never by itself evidence that nothing happened.
+Every response separates what was measured from what is not held. Sections carry a `state`, coverage counts ship alongside the results, and a null label means no label is held — never that a wallet or an influencer is safe. An empty list is never by itself evidence that nothing happened.
 
-Galaxy Score and AltRank measure attention and social-market health. They are not valuation, price targets, or investment advice.
+Galaxy Score and AltRank measure attention and social-market health. They are not valuation, price targets, or investment advice. Nothing here is a recommendation to buy or sell.
 
 **MCP endpoint:** https://onvexia.com/mcp
 **API documentation:** https://onvexia.com/openapi.json
@@ -218,14 +232,19 @@ pytest -q          # 50 tests, no network
 
 ## Keywords
 
-crypto MCP server · Model Context Protocol crypto · crypto sentiment analysis
-API · crypto social sentiment · whale tracking API · whale alert · on-chain
-analytics API · crypto market intelligence · bot detection crypto Twitter ·
-fake engagement detection · pump and dump detection · Galaxy Score API ·
-AltRank · social volume · social dominance · crypto influencer tracking ·
-exchange inflow outflow · DEX pair scanner · token unlock schedule · crypto
-screener API · Claude MCP crypto · ChatGPT crypto data · AI agent crypto tools ·
-x402 · pay per call API · USDC on Base · free crypto API no API key
+**For traders and investors:** crypto research tool · altcoin research · crypto
+market analysis · trending altcoins · crypto whale alerts · whale wallet
+tracker · smart money tracking · exchange inflow outflow · pump and dump
+detection · is this crypto a scam · crypto due diligence · token unlock
+schedule · holder concentration · crypto screener · social volume · crypto
+sentiment analysis · Galaxy Score · AltRank · crypto influencer accuracy ·
+find early crypto gems · DEX pair scanner · new exchange listings
+
+**For developers and AI agents:** crypto MCP server · Model Context Protocol
+crypto · crypto API · on-chain analytics API · crypto market intelligence API ·
+bot detection crypto Twitter · Claude MCP crypto · ChatGPT crypto data · Cursor
+MCP · AI agent crypto tools · x402 · pay per call API · USDC on Base · free
+crypto API no API key
 
 ## License
 
