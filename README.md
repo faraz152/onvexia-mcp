@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/logo.svg" alt="Onvexia crypto MCP server" width="120" height="120">
+<img src="assets/logo.png" alt="Onvexia — crypto research and market intelligence" width="128" height="128">
 
 # Onvexia — Crypto Research & Market Intelligence, for AI
 
