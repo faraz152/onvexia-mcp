@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # The hosted endpoint is the product. A weekly run catches it breaking even
+    # when nobody has pushed — which is how a dead endpoint normally goes
+    # unnoticed until a user reports it.
+    - cron: "17 6 * * 1"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - run: pip install -r requirements-dev.txt
+      - run: pytest -q
+
+  surface:
+    name: tool surface is fit to publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements-dev.txt
+      # Read the surface back through list_tools() — what an aggregator's
+      # scanner actually sees — not from the decorators.
+      - run: pytest -q tests/test_tool_metadata.py
+
+  hosted-endpoint:
+    name: https://onvexia.com/mcp answers
+    runs-on: ubuntu-latest
+    steps:
+      - name: initialize and tools/list, unauthenticated
+        run: |
+          set -euo pipefail
+          # A scanner probes exactly these two without credentials. If they stop
+          # answering, every registry listing degrades to "broken".
+          body='{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"ci","version":"1"}}}'
+          code=$(curl -s -o /tmp/init.txt -w '%{http_code}' -m 30 -X POST https://onvexia.com/mcp \
+            -H 'Content-Type: application/json' -H 'Accept: application/json, text/event-stream' -d "$body")
+          echo "initialize -> $code"
+          [ "$code" = "200" ] || { cat /tmp/init.txt; exit 1; }
+          grep -q '"serverInfo"' /tmp/init.txt || { echo "no serverInfo in the response"; cat /tmp/init.txt; exit 1; }

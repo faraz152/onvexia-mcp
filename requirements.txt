@@ -1,0 +1,13 @@
+# Onvexia MCP server
+
+mcp>=2,<3
+httpx>=0.27,<1
+
+# The hosted Streamable HTTP transport (http_server.py). Not needed for stdio.
+uvicorn>=0.27,<1
+starlette>=0.36
+
+# EIP-3009 signing, for answering an x402 payment challenge without an account.
+# OPTIONAL AT RUNTIME: api_client imports it lazily, so a key-authenticated
+# install never needs it. Only the pay-per-call path does.
+eth-account>=0.11,<1.0

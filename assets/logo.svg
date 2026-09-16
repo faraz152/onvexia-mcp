@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Onvexia">
+  <rect width="400" height="400" rx="72" fill="#0A0E14"/>
+  <g fill="none" stroke="#22D3EE" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M92 268 L152 188 L212 232 L308 120"/>
+    <circle cx="92"  cy="268" r="13" fill="#0A0E14"/>
+    <circle cx="152" cy="188" r="13" fill="#0A0E14"/>
+    <circle cx="212" cy="232" r="13" fill="#0A0E14"/>
+    <circle cx="308" cy="120" r="13" fill="#0A0E14"/>
+  </g>
+  <g fill="#22D3EE" opacity="0.35">
+    <rect x="92"  y="292" width="26" height="30" rx="5"/>
+    <rect x="138" y="278" width="26" height="44" rx="5"/>
+    <rect x="184" y="262" width="26" height="60" rx="5"/>
+    <rect x="230" y="286" width="26" height="36" rx="5"/>
+    <rect x="276" y="250" width="26" height="72" rx="5"/>
+  </g>
+</svg>
